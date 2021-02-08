@@ -1,0 +1,64 @@
+.subheader {
+    color: $DarkGrayishBlue;
+    width: 20.3125rem;
+    margin: 26px auto 32px auto;
+
+    @include breakpoint-up(medium) {
+        width: 67.625rem;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20.3125rem;
+    margin: 0 auto 0 auto;
+
+    @include breakpoint-up(medium) {
+        flex-direction: row;
+        width: 69.5rem;
+        // height: fit-content;
+        flex-wrap: wrap;
+    }
+
+    .stats {
+        height: 125px;
+        width: 326px;
+        border-radius: 6px;
+        background: #f0f2fa;
+        margin: 0 0 24px 0;
+
+        @include breakpoint-up(medium) {
+            height: 125px;
+            width: 248px;
+            margin: 0 15px 24px 15px;
+        }
+
+        .statwrap {
+            flex-direction: column;
+            height: 74px;
+            width: 270px;
+
+            @include breakpoint-up(medium) {
+                height: 74px;
+                width: 200px;
+            }
+
+            .row1, .row2 {
+                align-items: center;
+                flex-direction: row;
+
+                h2 {
+                    color: $VeryDarkBlue;
+                    font-size: 1.5625rem;
+                }
+
+                p {
+                    color: $DarkGrayishBlue;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

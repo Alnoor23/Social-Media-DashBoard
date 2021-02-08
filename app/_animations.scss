@@ -1,0 +1,19 @@
+@keyframes moveleft {
+    from {
+        margin-left: 0px;
+    }
+
+    to {
+        margin-left: 22px;
+    }
+}
+
+@keyframes moveback {
+    from {
+        margin-left: 22px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}

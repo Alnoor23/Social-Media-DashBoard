@@ -1,0 +1,311 @@
+@import "mixins";
+@import "animations";
+
+$tbar-width-mobile: 20.3125rem;
+$tbar-width-desktop: 16rem;
+
+.header {
+    flex-direction: column;
+    width: $tbar-width-mobile;
+    margin: auto;
+
+    @include breakpoint-up(medium) {
+        width: 69.5rem;
+    }
+
+    h2 {
+        color: $VeryDarkBlue;
+    }
+
+    p {
+        color: $DarkGrayishBlue;
+        font-weight: 600;
+    }
+
+    .head-text {
+        margin: 42px auto 0px auto;
+        width: $tbar-width-mobile;
+
+        @include breakpoint-up(medium) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 67.625rem;
+        }
+
+        .line {
+            display: inline-block;
+            width: 100%;
+            height: 1.5px;
+            background-color: #c7c9d1;
+            margin: 1.625rem auto 1rem auto;
+
+            @include breakpoint-up(medium) {
+                display: none;
+            }
+        }
+        .btn-container {
+            display: flex;
+
+            .toggle-btn {
+                display: inline-block;
+                height: 22px;
+                width: 44px;
+                margin: 0 0.75rem 0 11.375rem;
+                padding: 2px;
+                background-color: $ToggleL;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all 150ms ease-in-out;
+
+                @include breakpoint-up(medium){
+                    margin: 0 0.75rem 0 0.75rem;
+                }
+            }
+    
+            .inner-circle {
+                width: 18px;
+                height: 18px;
+                background-color: #ffffff;
+                border-radius: 50%;
+            }
+    
+            .active {
+                background: $ToggleD;
+                transition: all 150ms ease-in-out;
+    
+                .inner-circle {
+                    animation-name: moveleft;
+                    animation-duration: 0.5s;
+                    animation-fill-mode: forwards;
+                }
+            }
+    
+            .not-active {
+                transition: all 150ms ease-in-out;
+    
+                .inner-circle {
+                    animation-name: moveback;
+                    animation-duration: 0.5s;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+
+    .headbox-container {
+        flex-direction: column;
+        margin-top: 40px;
+
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+        }
+
+
+        .head-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //justify-content: center;
+            height: 13.5rem;
+            width: 100%;
+            //width: $tbar-width-mobile;
+            border-radius: 5px;
+            background: $LightGrayishBlue;
+            margin-bottom: 24px;
+
+            @include breakpoint-up(medium) {
+                flex-direction: column;
+                width: 264px;
+                margin: 0 15px 24px 15px;
+            }
+
+            &-fb {
+                border-top: 5px solid $Facebook;
+
+                .user {
+                    margin-top: 24px;
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+
+                    img {
+                        display: inline;
+                    }
+
+                    p {
+                        display: inline;
+                        align-self: center;
+                        margin-left: 6px;
+                    }
+                }
+
+                .tdy-count{
+                    position: relative;
+                    margin-top: 1.875rem;
+                    margin-bottom: 1.625rem;
+                    color: $LimeGreen;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        background-image: url('/images/icon-up.svg');
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        top: 3px;
+                        left: -12px;
+                        height: 10px;
+                        width: 10px;
+                    }
+                }
+            }
+    
+            &-twt {
+                border-top: 5px solid $Twitter;
+                
+                .user {
+                    margin-top: 24px;
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+
+                    img {
+                        display: inline;
+                    }
+
+                    p {
+                        display: inline;
+                        align-self: center;
+                        margin-left: 6px;
+                    }
+                }
+
+                .tdy-count{
+                    position: relative;
+                    margin-top: 1.875rem;
+                    margin-bottom: 1.625rem;
+                    color: $LimeGreen;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        background-image: url('/images/icon-up.svg');
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        top: 3px;
+                        left: -13px;
+                        height: 10px;
+                        width: 10px;
+                    }
+                }
+            }
+    
+            &-insta {
+                background-image: $Instagram;
+                overflow: hidden;
+
+                .wrap {
+                    height: 220px;
+                    width: 102%;
+                    background: $LightGrayishBlue;
+                    align-self: inherit;
+                    margin-top: 5px;
+                    text-align: center;
+                    
+                    .user {
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 24px;
+                        justify-content: center;
+                        align-content: center;
+
+                        img {
+                            display: inline;
+                        }
+
+                        p {
+                            display: inline;
+                            align-self: center;
+                            margin-left: 6px;
+                        }
+                    }
+
+                }
+
+                .tdy-count{
+                    position: relative;
+                    margin-top: 1.875rem;
+                    margin-bottom: 1.625rem;
+                    color: $LimeGreen;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        background-image: url('/images/icon-up.svg');
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        top: 2px;
+                        left: 81px;
+                        height: 10px;
+                        width: 10px;
+                    }
+                }
+            }
+
+            &-yt {
+                border-top: 5px solid $YouTube;
+
+                .user {
+                    margin-top: 24px;
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+
+                    img {
+                        display: inline;
+                    }
+
+                    p {
+                        display: inline;
+                        align-self: center;
+                        margin-left: 6px;
+                    }
+                }
+                
+                .tdy-count{
+                    position: relative;
+                    margin-top: 1.875rem;
+                    margin-bottom: 1.625rem;
+                    color: $BrightRed;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        background-image: url('/images/icon-down.svg');
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        top: 3px;
+                        left: -12px;
+                        height: 10px;
+                        width: 10px;
+                    }
+                }
+            }
+
+            .user, .fname, .tdy-count{
+                font-size: 0.75rem;
+            }
+
+            .count {
+                font-size: 2.625rem;
+                margin-top: 1.875rem;
+                margin-bottom: 1rem;
+            }
+
+            .fname {
+                text-transform: uppercase;
+                letter-spacing: 0.3125rem;
+            }
+        }
+    }
+}
