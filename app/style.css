@@ -142,7 +142,7 @@ html {
 .count-minus::before {
   content: '';
   position: absolute;
-  background-image: url("/images/icon-down.svg");
+  background-image: url("https://alnoor23.github.io/Social-Media-DashBoard/images/icon-down.svg");
   background-repeat: no-repeat;
   background-position: center center;
   top: 3px;
@@ -162,7 +162,7 @@ html {
 .count-plus::before {
   content: '';
   position: absolute;
-  background-image: url("/images/icon-up.svg");
+  background-image: url("https://alnoor23.github.io/Social-Media-DashBoard/images/icon-up.svg");
   background-repeat: no-repeat;
   background-position: center center;
   top: 3px;
@@ -576,7 +576,7 @@ body::before {
 .header .headbox-container .head-box-insta .tdy-count::before {
   content: '';
   position: absolute;
-  background-image: url("/images/icon-up.svg");
+  background-image: url("https://alnoor23.github.io/Social-Media-DashBoard/images/icon-up.svg");
   background-repeat: no-repeat;
   background-position: center center;
   top: 2px;
