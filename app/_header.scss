@@ -139,25 +139,6 @@ $tbar-width-desktop: 16rem;
                         margin-left: 6px;
                     }
                 }
-
-                .tdy-count{
-                    position: relative;
-                    margin-top: 1.875rem;
-                    margin-bottom: 1.625rem;
-                    color: $LimeGreen;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        background-image: url('/images/icon-up.svg');
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        top: 3px;
-                        left: -12px;
-                        height: 10px;
-                        width: 10px;
-                    }
-                }
             }
     
             &-twt {
@@ -177,25 +158,6 @@ $tbar-width-desktop: 16rem;
                         display: inline;
                         align-self: center;
                         margin-left: 6px;
-                    }
-                }
-
-                .tdy-count{
-                    position: relative;
-                    margin-top: 1.875rem;
-                    margin-bottom: 1.625rem;
-                    color: $LimeGreen;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        background-image: url('/images/icon-up.svg');
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        top: 3px;
-                        left: -13px;
-                        height: 10px;
-                        width: 10px;
                     }
                 }
             }
@@ -271,28 +233,9 @@ $tbar-width-desktop: 16rem;
                         margin-left: 6px;
                     }
                 }
-                
-                .tdy-count{
-                    position: relative;
-                    margin-top: 1.875rem;
-                    margin-bottom: 1.625rem;
-                    color: $BrightRed;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        background-image: url('/images/icon-down.svg');
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        top: 3px;
-                        left: -12px;
-                        height: 10px;
-                        width: 10px;
-                    }
-                }
             }
 
-            .user, .fname, .tdy-count{
+            .user, .fname, .tdy-count, .count-plus, .count-minus{
                 font-size: 0.75rem;
             }
 

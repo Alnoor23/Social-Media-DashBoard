@@ -62,7 +62,7 @@ html {
                 }
         
                 p {
-                    color: $DesaturatedBlue !important;
+                    color: $DesaturatedBlue;
                 }
             }
         }
@@ -91,6 +91,46 @@ html {
         @include breakpoint-up(medium){
             min-width: 69.5rem;
         }
+    }
+}
+
+.count-minus {
+    position: relative;
+    font-size: 0.75rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.625rem;
+    color: $BrightRed !important;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('/images/icon-down.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        top: 3px;
+        left: -12px;
+        height: 10px;
+        width: 10px;
+    }
+}
+
+.count-plus {
+    position: relative;
+    font-size: 0.75rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.625rem;
+    color: $LimeGreen !important;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('/images/icon-up.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        top: 3px;
+        left: -12px;
+        height: 10px;
+        width: 10px;
     }
 }
 
