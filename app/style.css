@@ -580,9 +580,15 @@ body::before {
   background-repeat: no-repeat;
   background-position: center center;
   top: 2px;
-  left: 81px;
+  left: 120px;
   height: 10px;
   width: 10px;
+}
+
+@media (min-width: 40em) {
+  .header .headbox-container .head-box-insta .tdy-count::before {
+    left: 81px;
+  }
 }
 
 .header .headbox-container .head-box-yt {
